@@ -1,5 +1,6 @@
 # Importing the pipeline function from the transformers library
 from transformers import pipeline
+import torch
 import streamlit as st
 
 input=st.text_input("Inserisci titolo articolo")
