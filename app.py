@@ -5,10 +5,10 @@ import streamlit as st
 input=st.text_input("Inserisci titolo articolo")
 
 # Creating a TextGenerationPipeline for text generation
-generator = pipeline(task=input, model='gpt2')
+generator = pipeline(task='text-generation', model='gpt2')
 
 if st.button("Genera Articoli"):
   # Generating
-  out = generator("It takes time to write a good blog post.", max_length=60, num_return_sequences=5)
+  out = generator(input, max_length=60, num_return_sequences=5)
   st.write(out)
  
